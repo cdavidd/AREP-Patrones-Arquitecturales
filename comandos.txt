@@ -1,0 +1,25 @@
+Comando EC2
+
+-java
+sudo yum install -y java-1.8.0-openjdk-devel
+sudo yum remove java-1.7.0-openjdk
+
+-mvn
+https://maven.apache.org/download.cgi
+wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+cd /opt
+sudo tar -xvzf ~/Downloads/apache-maven-3.6.3-bin.tar.gz
+sudo vi /etc/profile
+ al final del archivo poner
+export M2_HOME="/opt/apache-maven-3.6.3"
+export PATH="$PATH:$M2_HOME/bin"
+. /etc/profile
+
+-git
+sudo yum install -y git
+
+
+
+-correr la aplicacion
+mvn package
+mvn spring-boot:run
